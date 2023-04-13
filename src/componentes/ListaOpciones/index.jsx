@@ -10,7 +10,7 @@ const ListaOpciones = () => {
         "Front End",
         "Data Science",
         "Devops",
-        "UX y Diseno",
+        "UX y Diseño",
         "Movil",
         "Innovacion y Gestion"
     ]
