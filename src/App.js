@@ -13,7 +13,38 @@ function App() {
     foto:"http://github.com/zdzyy.png",
     nombre:"Diego",
     puesto:"Streamer"
-  }])
+  },
+  {
+    equipo:"Programacion",
+    foto:"https://imagenes.20minutos.es/files/gallery_desktop_default_content/uploads/imagenes/2021/08/31/shrek-3.jpeg",
+    nombre:"Shrek",
+    puesto:"Ogro"
+  },
+  {
+    equipo:"Ux y Diseño",
+    foto:"https://pbs.twimg.com/profile_images/1364070437639094272/guUYd44L_400x400.png",
+    nombre:"Sonic",
+    puesto:"Atleta"
+  },
+  {
+    equipo:"Programacion",
+    foto:"https://github.com/christianpva.png",
+    nombre:"Christian",
+    puesto:"Instructor"
+  },
+  {
+    equipo:"Innovacion y Gestion",
+    foto:"https://github.com/JoseDarioGonzalezCha.png",
+    nombre:"Jose Dario",
+    puesto:"Instructor"
+  },
+  {
+    equipo:"Devops",
+    foto:"https://static01.nyt.com/images/2022/05/05/arts/05bad-bunny-ESP-00/merlin_206353689_6648fbf7-be54-4a23-b2e0-1ec2065ef7e4-superJumbo.jpg?quality=75&auto=webp",
+    nombre:"Benito",
+    puesto:"Singer"
+  }
+  ])
 
   //Ternario --> condicion ? seMuestra : noSeMuestra
   // condicion && seMuestra
@@ -28,6 +59,12 @@ function App() {
     console.log("Nuevo colaborador ", colaborador);
     //spread operator
     actualizarColaboradores([...colaboradores, colaborador])
+  }
+
+  //Eliminar colaborador
+
+  const eliminarColaborador = () => {
+    console.log("Eliminar colaborador");
   }
 
   //Lista de equipos
@@ -85,6 +122,7 @@ function App() {
           datos={equipo} 
           key={equipo.titulo}
           colaboradores={colaboradores.filter(colaborador => colaborador.equipo === equipo.titulo)} 
+          eliminarColaborador={eliminarColaborador}
         />)
       }
 
