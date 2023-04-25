@@ -8,7 +8,7 @@ const Equipo = (props) => {
     const { colorPrimario, colorSecundario, titulo } = props.datos
     const { colaboradores, eliminarColaborador, actualizarColor } = props
     const obj = {
-        backgroundColor: colorSecundario
+        backgroundColor: colorPrimario
     }
 
     const estiloTitulo = { borderColor: colorPrimario }
@@ -18,7 +18,7 @@ const Equipo = (props) => {
             <input
                 type='color'
                 className="input-color"
-                value={colorSecundario}
+                value={colorPrimario}
                 onChange={(evento) => {
                     actualizarColor(evento.target.value, titulo)
                 }}

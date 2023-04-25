@@ -46,6 +46,47 @@ function App() {
   }
   ])
 
+  const [equipos, actualizarEquipos] = useState(
+    [
+      {
+        titulo:"Programacion",
+        colorPrimario: "#57C278",
+        colorSecundario: "#D9F7E9"
+      },
+      { 
+        titulo:"Front End",
+        colorPrimario: "#82CFFA",
+        colorSecundario: "#E8F8FF"
+      },
+      { 
+        titulo:"Data Science",
+        colorPrimario: "#A6D157",
+        colorSecundario: "#F0F8E2"
+      },
+      { 
+        titulo:"Devops",
+        colorPrimario: "#E06B69",
+        colorSecundario: "#FDE7E8"
+      },
+      { 
+        titulo:"Ux y Diseño",
+        colorPrimario: "#DB6EBF",
+        colorSecundario: "#FAE9F5"
+      },
+      { 
+        titulo:"Movil",
+        colorPrimario: "#FFBA05",
+        colorSecundario: "#FFF5D9"
+      },
+      { 
+        titulo:"Innovacion y Gestion",
+        colorPrimario: "#FF8A29",
+        colorSecundario: "#FFEEDF"
+      },
+    ]
+  
+  )
+
   //Ternario --> condicion ? seMuestra : noSeMuestra
   // condicion && seMuestra
 
@@ -71,46 +112,14 @@ function App() {
 
   const actualizarColor = (color, titulo) => {
     console.log("Actualizar: ", color, titulo);
+    const equiposActualizado = equipos.map((equipo) => {
+      if(equipo.titulo === titulo) {
+        equipo.colorPrimario = color
+      }
+      return equipo
+    })
+    actualizarEquipos(equiposActualizado)
   }
-
-  //Lista de equipos
-  const equipos = [
-    {
-      titulo:"Programacion",
-      colorPrimario: "#57C278",
-      colorSecundario: "#D9F7E9"
-    },
-    { 
-      titulo:"Front End",
-      colorPrimario: "#82CFFA",
-      colorSecundario: "#E8F8FF"
-    },
-    { 
-      titulo:"Data Science",
-      colorPrimario: "#A6D157",
-      colorSecundario: "#F0F8E2"
-    },
-    { 
-      titulo:"Devops",
-      colorPrimario: "#E06B69",
-      colorSecundario: "#FDE7E8"
-    },
-    { 
-      titulo:"Ux y Diseño",
-      colorPrimario: "#DB6EBF",
-      colorSecundario: "#FAE9F5"
-    },
-    { 
-      titulo:"Movil",
-      colorPrimario: "#FFBA05",
-      colorSecundario: "#FFF5D9"
-    },
-    { 
-      titulo:"Innovacion y Gestion",
-      colorPrimario: "#FF8A29",
-      colorSecundario: "#FFEEDF"
-    },
-]
 
   return (
     <div>
