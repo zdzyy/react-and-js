@@ -2,10 +2,10 @@ import "./Colaborador.css"
 import { TiUserDelete } from "react-icons/ti"
 
 const Colaborador = (props) => {
-    const { nombre,puesto,foto,equipo} = props.datos
+    const { nombre,puesto,foto,equipo, id} = props.datos
     const {colorPrimario,eliminarColaborador} = props
     return <div className="colaborador">
-        <TiUserDelete className="eliminar" onClick={eliminarColaborador}/>
+        <TiUserDelete className="eliminar" onClick={() => eliminarColaborador(id)}/>
         <div className="encabezado" style={{backgroundColor: colorPrimario}}>
             <img src={foto} alt={nombre} />
         </div>
